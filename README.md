@@ -88,25 +88,27 @@ one-arrow-game/
 
 ### 开始界面
 
-![alt text](c3d6fee944adfeb6e21368f6fd3574ae.png)
+![开始界面](assets/screenshots/start.png)
 
 ### 选择关卡界面
-![alt text](387fb2e381daf346ed038bc703875cd4.png)
+
+![选择关卡界面](assets/screenshots/level_select.png)
 
 ### 游戏指南界面
-![alt text](4fc3652fc5eccc78e5985c2b3ea7d9b6.png)
+
+![游戏指南界面](assets/screenshots/help.png)
 
 ### 游戏界面
 
-![alt text](34dc4660cd7d4651071425eade422643.png)
+![游戏界面](assets/screenshots/game.png)
 
 ### 通关界面
 
-![alt text](549490cd31a1aca1a50f861d4fab1f00.png)
+![通关界面](assets/screenshots/clear.png)
 
 ### 失败界面
 
-![alt text](77c8f9160b1469a76cdf7ce7962fc21b.png)
+![失败界面](assets/screenshots/fail.png)
 
 ## 素材来源与版权说明
 
