@@ -37,6 +37,7 @@ class Game:
         self.mistakes = theme.MAX_MISTAKES
         self.score = 0
         self.level_start_time = 0
+        self.level_clear_time = 0
         self.hint_used = False
 
         self.message_text = ""
@@ -271,6 +272,11 @@ class Game:
 
         active_count = sum(1 for a in self.arrows if a["active"])
         if active_count == 0 and self.current_screen == SCREEN_GAME:
+            # 记录本关用时
+            self.level_clear_time = (
+                pygame.time.get_ticks() - self.level_start_time
+            ) // 1000
+
             if self.current_level >= len(LEVELS) - 1:
                 self.current_screen = SCREEN_SUCCESS
             else:
@@ -460,6 +466,11 @@ class Game:
                          theme.BLACK, (theme.WIDTH // 2, 310))
         render.draw_text(self.screen, f"当前得分：{self.score}",
                          theme.get_font(22), theme.PURPLE, (theme.WIDTH // 2, 365))
+        minutes = self.level_clear_time // 60
+        seconds = self.level_clear_time % 60
+        render.draw_text(self.screen, f"本关用时：{minutes:02d}:{seconds:02d}",
+                         theme.get_font(22), theme.DARK_BLUE,
+                         (theme.WIDTH // 2, 405))
 
         render.draw_button(self.screen, pygame.Rect(300, 450, 300, 65),
                            "下一关", mouse_pos, theme.get_font(28), theme.GREEN)
@@ -482,6 +493,12 @@ class Game:
         render.draw_mascot(self.screen, theme.WIDTH // 2, 350)
         render.draw_text(self.screen, f"最终得分：{self.score}",
                          theme.get_font(22), theme.BLACK, (theme.WIDTH // 2, 445))
+        # 本次总用时
+        minutes = self.level_clear_time // 60
+        seconds = self.level_clear_time % 60
+        render.draw_text(self.screen, f"最后一关用时：{minutes:02d}:{seconds:02d}",
+                         theme.get_font(20), theme.DARK_BLUE,
+                         (theme.WIDTH // 2, 485))
 
         render.draw_button(self.screen, pygame.Rect(300, 510, 300, 65),
                            "再玩一次", mouse_pos, theme.get_font(28), theme.GREEN)
