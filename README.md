@@ -110,6 +110,10 @@ one-arrow-game/
 
 ![失败界面](assets/screenshots/fail.png)
 
+### 动画演示
+
+![动画演示](assets/screenshots/demo.gif)
+
 ## 素材来源与版权说明
 
 - 本项目只参考“一箭又一箭”类游戏的基础玩法，没有复制原商业游戏的代码、素材、音效或关卡。
