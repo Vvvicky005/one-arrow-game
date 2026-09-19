@@ -110,6 +110,10 @@ one-arrow-game/
 
 ![失败界面](assets/screenshots/fail.png)
 
+### 全部通关界面
+
+![全部通关界面](assets/screenshots/all_clear.png)
+
 ### 动画演示
 
 ![动画演示](assets/screenshots/demo.gif)
